@@ -5,6 +5,7 @@
   /* Size */
   width: 100%;
   height: var(--topbarHeightDesktop);
+  background-color: #E0D5C1 !important;
 
   /* Layout for child components */
   display: flex;
