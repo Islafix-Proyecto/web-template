@@ -82,10 +82,9 @@ const PanelHeading = props => {
       ) : null}
       {!listingDeleted && showExtraInfo ? (
         <p className={css.transactionInfoMessage} style={{ whiteSpace: 'pre-line' }}>
-          <FormattedMessage
-            id={`TransactionPage.${processName}.${transactionRole}.${processState}.extraInfo`}
-            values={{ customerName, providerName, marketplaceName, deliveryMethod, breakline, br: <><br /><br /></> }}
-          />
+          📅 En Islafix trabajamos con una reserva de cita que el profesional fijará para cada cliente.<br /><br />
+            ⏱️ La reserva se puede cancelar en cualquier momento siempre y cuando se efectúe 24h antes del día del servicio.<br /><br />
+            🤝 Con esto garantizamos el compromiso, la seguridad y la confianza entre el profesional y el cliente.
         </p>
       ) : null}
       {isProvider && isPendingPayment ? (
