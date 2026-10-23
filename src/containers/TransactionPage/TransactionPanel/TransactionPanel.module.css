@@ -511,3 +511,29 @@
     margin-top: 16px;
   }
 }
+
+
+.canariasBannerWrapper {
+  width: 100%;
+  max-width: 340px;
+  height: 220px;
+  border-radius: 16px;
+  overflow: hidden; /* Corta bordes para que las flores/diseño no invadan el texto */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  margin-bottom: 20px;
+  background-color: #ffffff;
+}
+
+.canariasBannerImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+@media (max-width: 767px) {
+  .canariasBannerWrapper {
+    max-width: 100%;
+    height: 180px;
+  }
+}
