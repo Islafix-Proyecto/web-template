@@ -76,15 +76,15 @@ const PanelHeading = props => {
         ) : null}
       </H2>
       {isCustomer && listingDeleted ? (
-       <p className={css.transactionInfoMessage} style={{ whiteSpace: 'pre-line' }}>
+       <p className={css.transactionInfoMessage}>
           <FormattedMessage id="TransactionPanel.messageDeletedListing" />
         </p>
       ) : null}
       {!listingDeleted && showExtraInfo ? (
-        <p className={css.transactionInfoMessage}>
+        <p className={css.transactionInfoMessage} style={{ whiteSpace: 'pre-line' }}>
           <FormattedMessage
             id={`TransactionPage.${processName}.${transactionRole}.${processState}.extraInfo`}
-            values={{ customerName, providerName, marketplaceName, deliveryMethod, breakline }}
+            values={{ customerName, providerName, marketplaceName, deliveryMethod, breakline, br: <><br /><br /></> }}
           />
         </p>
       ) : null}
