@@ -513,7 +513,12 @@
 }
 
 
-/* --- Contenedor principal de la tarjeta --- */
+/* --- Contenedor de referencia general --- */
+:global(.TransactionPage_tabContentVisible__NUglp) {
+  position: relative !important;
+  overflow: hidden !important;
+}
+
 :global(.TransactionPanel_root) {
   position: relative !important;
   overflow: hidden !important;
