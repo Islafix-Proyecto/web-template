@@ -57,6 +57,15 @@ const PanelHeading = props => {
 
   return (
     <>
+      {/* Banner artístico de Canarias */}
+      <div className={css.canariasBannerWrapper}>
+        <img
+          src="/static/banner-canarias.jpg"
+          alt="Islafix Canarias"
+          className={css.canariasBannerImg}
+        />
+      </div>
+          
       <H1 className={titleClasses}>
         <span className={css.mainTitle}>
           <FormattedMessage
@@ -65,17 +74,7 @@ const PanelHeading = props => {
           />
         </span>
       </H1>
-      <H2 className={css.listingTitleMobile}>
-        <FormattedMessage id="TransactionPage.listingTitleMobile" values={{ listingLink }} />
-
-        {showPriceOnMobile && price ? (
-          <>
-            <br />
-            <span className={css.inquiryPrice}>{formatMoney(intl, price)}</span>
-          </>
-        ) : null}
-      </H2>
-      {isCustomer && listingDeleted ? (
+       {isCustomer && listingDeleted ? (
        <p className={css.transactionInfoMessage}>
           <FormattedMessage id="TransactionPanel.messageDeletedListing" />
         </p>
