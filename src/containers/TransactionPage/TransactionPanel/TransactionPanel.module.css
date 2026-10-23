@@ -529,9 +529,9 @@
 .canariasBannerWrapper {
   position: absolute;
   top: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
+  left: 24px;
+  right: 24px;
+  width: auto;
   height: 200px;
   border-radius: 12px 12px 0 0;
   overflow: hidden;
@@ -555,6 +555,11 @@
 
   .canariasBannerWrapper {
     height: 160px;
-    border-radius: 0;
+    left: 16px;
+    right: 16px;
+    border-radius: 8px 8px 0 0;
   }
 }
+
+
+   
