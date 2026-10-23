@@ -57,14 +57,7 @@ const PanelHeading = props => {
 
   return (
     <>
-      {/* Banner artístico de Canarias */}
-      <div className={css.canariasBannerWrapper}>
-        <img
-          src="/static/banner-canarias.jpg"
-          alt="Islafix Canarias"
-          className={css.canariasBannerImg}
-        />
-      </div>
+      
           
       <H1 className={titleClasses}>
         <span className={css.mainTitle}>
