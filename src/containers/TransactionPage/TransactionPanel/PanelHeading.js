@@ -76,7 +76,7 @@ const PanelHeading = props => {
         ) : null}
       </H2>
       {isCustomer && listingDeleted ? (
-        <p className={css.transactionInfoMessage}>
+       <p className={css.transactionInfoMessage} style={{ whiteSpace: 'pre-line' }}>
           <FormattedMessage id="TransactionPanel.messageDeletedListing" />
         </p>
       ) : null}
