@@ -1403,7 +1403,7 @@
   "TransactionPage.default-negotiation.provider.offer-pending.title": "Tu oferta ha sido recibida.",
   "TransactionPage.default-negotiation.provider.offer-rejected.title": "La oferta fue rechazada.",
   "TransactionPage.default-negotiation.provider.pending-payment.title": "El pago aún no ha sido confirmado.",
-  "TransactionPage.default-negotiation.provider.quote-requested.extraInfo": "📅 En Islafix trabajamos con una reserva de cita que el profesional fijará para cada cliente.{br}{br}⏱️ La reserva se puede cancelar en cualquier momento siempre y cuando se efectúe 24h antes del día del servicio.{br}{br}🤝 Con esto garantizamos el compromiso, la seguridad y la confianza entre el profesional y el cliente."
+  "TransactionPage.default-negotiation.provider.quote-requested.extraInfo": "&#128197; En Islafix trabajamos con una reserva de cita que el profesional fijará para cada cliente.{br}{br}&#9201;&#65039; La reserva se puede cancelar en cualquier momento siempre y cuando se efectúe 24h antes del día del servicio.{br}{br}&#129309; Con esto garantizamos el compromiso, la seguridad y la confianza entre el profesional y el cliente.",
   "TransactionPage.default-negotiation.provider.quote-requested.title": "{customerName} solicitó una cotización",
   "TransactionPage.default-negotiation.provider.request-rejected.title": "La solicitud fue rechazada.",
   "TransactionPage.default-negotiation.provider.reviewed-by-customer.title": "¡{customerName} recibió el pedido!",
