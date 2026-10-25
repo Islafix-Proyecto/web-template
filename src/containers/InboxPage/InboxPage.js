@@ -402,8 +402,7 @@ export const InboxPageComponent = props => {
         }
         footer={<FooterContainer />}
       >
-          <div className={css.root}>
-          <div className={css.contentContainer}>
+          
             <InboxSearchForm
           onSubmit={() => {}}
           onSelect={handleSortSelect(tab, routeConfiguration, history)}
@@ -442,14 +441,10 @@ export const InboxPageComponent = props => {
             pagination={pagination}
           />
         ) : null}
-      </div>
-              </div>
-    
-  </LayoutSideNavigation>
-              
-  </Page>
-);
-};
+      </LayoutSideNavigation>
+      </Page>
+   );
+ };
 
 const mapStateToProps = state => {
   const { fetchInProgress, fetchOrdersOrSalesError, pagination, transactionRefs } = state.InboxPage;
