@@ -10,7 +10,16 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
-
+/* Contenedor blanco para que el chat resalte sobre la foto */
+.contentContainer {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  margin: 24px auto;
+  max-width: 1050px;
+  width: 92%;
+}
 .loading {
   display: flex;
   flex-direction: column;
