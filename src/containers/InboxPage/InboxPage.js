@@ -442,9 +442,9 @@ export const InboxPageComponent = props => {
             pagination={pagination}
           />
         ) : null}
-      </LayoutSideNavigation>
+      </div>
     </div>
-  </div>
+  </LayoutSideNavigation>
 </Page>
   );
 };
