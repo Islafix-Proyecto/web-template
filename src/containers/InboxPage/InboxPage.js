@@ -381,7 +381,6 @@ export const InboxPageComponent = props => {
     <Page title={title} scrollingDisabled={scrollingDisabled}>
       <LayoutSideNavigation
         sideNavClassName={css.navigation}
-        contentPageClassName={css.root}
         topbar={
           <TopbarContainer
             mobileRootClassName={css.mobileTopbar}
@@ -403,6 +402,7 @@ export const InboxPageComponent = props => {
         }
         footer={<FooterContainer />}
       >
+          <div className={css.root}>
           <div className={css.contentContainer}>
             <InboxSearchForm
           onSubmit={() => {}}
@@ -442,10 +442,12 @@ export const InboxPageComponent = props => {
             pagination={pagination}
           />
         ) : null}
-      
-    </div>
+      </div>
+              </div>
+    
   </LayoutSideNavigation>
-</Page>
+              
+  </Page>
 );
 };
 
