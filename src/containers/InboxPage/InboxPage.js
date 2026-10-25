@@ -379,8 +379,9 @@ export const InboxPageComponent = props => {
 
   return (
     <Page title={title} scrollingDisabled={scrollingDisabled}>
-      <LayoutSideNavigation
-        sideNavClassName={css.navigation}
+      <div className={css.root}>
+        <LayoutSideNavigation
+          sideNavClassName={css.navigation}
         topbar={
           <TopbarContainer
             mobileRootClassName={css.mobileTopbar}
@@ -402,9 +403,8 @@ export const InboxPageComponent = props => {
         }
         footer={<FooterContainer />}
       >
-          <div className={css.root}>
-  <div className={css.contentContainer}>
-        <InboxSearchForm
+          <div className={css.contentContainer}>
+            <InboxSearchForm
           onSubmit={() => {}}
           onSelect={handleSortSelect(tab, routeConfiguration, history)}
           intl={intl}
@@ -442,11 +442,12 @@ export const InboxPageComponent = props => {
             pagination={pagination}
           />
         ) : null}
-      </div>
+      
     </div>
   </LayoutSideNavigation>
+</div>
 </Page>
-  );
+);
 };
 
 const mapStateToProps = state => {
