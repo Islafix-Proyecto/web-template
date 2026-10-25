@@ -4,7 +4,11 @@
   display: flex;
   flex-direction: column;
   flex: 1;
-  background-color: #F0F7FF;
+  background-image: url('../../assets/fondo-transaccion.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .loading {
