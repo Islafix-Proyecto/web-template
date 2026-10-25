@@ -402,6 +402,8 @@ export const InboxPageComponent = props => {
         }
         footer={<FooterContainer />}
       >
+          <div className={css.root}>
+  <div className={css.contentContainer}>
         <InboxSearchForm
           onSubmit={() => {}}
           onSelect={handleSortSelect(tab, routeConfiguration, history)}
@@ -441,7 +443,9 @@ export const InboxPageComponent = props => {
           />
         ) : null}
       </LayoutSideNavigation>
-    </Page>
+    </div>
+  </div>
+</Page>
   );
 };
 
