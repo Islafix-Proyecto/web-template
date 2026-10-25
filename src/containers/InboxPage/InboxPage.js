@@ -379,9 +379,9 @@ export const InboxPageComponent = props => {
 
   return (
     <Page title={title} scrollingDisabled={scrollingDisabled}>
-      <div className={css.root}>
-        <LayoutSideNavigation
-          sideNavClassName={css.navigation}
+      <LayoutSideNavigation
+        sideNavClassName={css.navigation}
+        contentPageClassName={css.root}
         topbar={
           <TopbarContainer
             mobileRootClassName={css.mobileTopbar}
@@ -445,7 +445,6 @@ export const InboxPageComponent = props => {
       
     </div>
   </LayoutSideNavigation>
-</div>
 </Page>
 );
 };
