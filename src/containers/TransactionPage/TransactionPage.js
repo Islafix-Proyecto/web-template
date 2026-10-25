@@ -1038,7 +1038,11 @@ export const TransactionPageComponent = props => {
       scrollingDisabled={scrollingDisabled}
     >
       <LayoutSingleColumn topbar={<TopbarContainer />} footer={<FooterContainer />}>
-        <div className={css.root}>{panel}</div>
+       <div className={css.root}> 
+         <div className={css.contentContainer}>
+           {panel}
+         </div>
+       </div>
         <ReviewModal
           id="ReviewOrderModal"
           isOpen={isReviewModalOpen}
