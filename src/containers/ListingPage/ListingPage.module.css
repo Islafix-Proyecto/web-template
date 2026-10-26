@@ -858,11 +858,14 @@
   padding: 24px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 }
-/* Forzar contenedor blanco en los bloques de contenido de la página de anuncio */
+/* Forzar contenedor blanco en todos los bloques de contenido y panel de reserva */
 .pageRoot :global(.contentContainer),
 .pageRoot section,
 .pageRoot div[class*="panel"],
-.pageRoot div[class*="booking"] {
+.pageRoot div[class*="booking"],
+.pageRoot div[class*="orderPanel"],
+.pageRoot div[class*="desktopBookingPanel"],
+.pageRoot aside {
   background-color: #ffffff !important;
   border-radius: 12px;
   padding: 24px;
