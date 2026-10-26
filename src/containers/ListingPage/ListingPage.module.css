@@ -858,16 +858,11 @@
   padding: 24px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 }
-/* Forzar tarjetas blancas con máxima especificidad en toda la página de detalle */
-:global(.listing-page-content),
-:global(.orderPanel),
-:global(.desktopBookingPanel),
-.pageRoot section,
-.pageRoot aside,
-.pageRoot div[class*="panel"],
-.pageRoot div[class*="booking"],
-.pageRoot div[class*="orderPanel"] {
+.desktopBookingPanel,
+.orderPanel,
+aside {
   background-color: #ffffff !important;
   border-radius: 12px !important;
   padding: 24px !important;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08) !important;
+}
