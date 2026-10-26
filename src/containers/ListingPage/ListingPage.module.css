@@ -4,16 +4,7 @@
   
 }
 
-.pageRoot {
-  /* Ponemos aquí el fondo de la playa para que cubra toda la página del anuncio */
-  background-image: linear-gradient(rgba(255, 255, 255, 0.35), rgba(255, 255, 255, 0.35)), url('../../assets/fondo-transaccion.jpg');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  min-height: 100vh;
-  padding-bottom: 90px;
-}
+
   @media (--viewportLarge) {
     .pageRoot {
     padding-bottom: 0;
