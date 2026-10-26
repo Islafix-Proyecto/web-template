@@ -399,7 +399,7 @@
 /* Imagen de fondo decorativa en la columna izquierda del buzón */
 .navigation {
   background-image: url('../../assets/inbox-sidebar.png') !important;
-  background-size: cover !important;
-  background-position: center !important;
+  background-size: contain !important;
+  background-position: top center !important;
   background-repeat: no-repeat !important;
 }
