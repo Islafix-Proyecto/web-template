@@ -1,7 +1,7 @@
 @import '../../styles/customMediaQueries.css';
 
 .root {
-  background-image: linear-gradient(rgba(255, 255, 255, 0.35), rgba(255, 255, 255, 0.35)), url('../../assets/landingCover.jpg');
+  background-image: linear-gradient(rgba(255, 255, 255, 0.35), rgba(255, 255, 255, 0.35)), url('../../assets/fondo-transaccion.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
