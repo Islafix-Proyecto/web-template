@@ -858,11 +858,14 @@
   padding: 24px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 }
+/* Forzar tarjeta blanca absoluta en el panel de reserva derecho */
 .desktopBookingPanel,
-.orderPanel,
-aside {
+div[class*="desktopBookingPanel"],
+div[class*="orderPanel"],
+div[class*="bookingPanel"],
+aside > div {
   background-color: #ffffff !important;
   border-radius: 12px !important;
   padding: 24px !important;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12) !important;
 }
