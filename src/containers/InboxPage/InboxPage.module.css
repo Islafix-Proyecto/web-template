@@ -384,11 +384,7 @@
   display: flex;
   flex-direction: column;
   flex: 1;
-  background-image: url('../../assets/fondo-buzon.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+ 
 }
 
 .contentContainer {
@@ -399,4 +395,11 @@
   margin: 24px auto;
   max-width: 1050px;
   width: 92%;
+}
+/* Imagen de fondo decorativa en la columna izquierda del buzón */
+.navigation {
+  background-image: url('../../assets/inbox-sidebar.png') !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
 }
