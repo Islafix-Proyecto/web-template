@@ -396,10 +396,17 @@
   max-width: 1050px;
   width: 92%;
 }
-/* Imagen de fondo decorativa en la columna izquierda del buzón */
+/* 1. Por defecto en móviles: la barra lateral limpia sin imagen de fondo */
 .navigation {
-  background-image: url('../../assets/inbox-sidebar.png') !important;
-  background-size: contain !important;
-  background-position: top center !important;
-  background-repeat: no-repeat !important;
+  background-image: none !important;
+}
+
+/* 2. En pantallas grandes (ordenadores de más de 768px): aparece tu imagen de Canva */
+@media (min-width: 769px) {
+  .navigation {
+    background-image: url('../../assets/inbox-sidebar.png') !important;
+    background-size: contain !important;
+    background-position: top center !important;
+    background-repeat: no-repeat !important;
+  }
 }
