@@ -131,3 +131,21 @@
   composes: p from global;
   font-weight: var(--fontWeightBold);
 }
+/* 1. Imagen de fondo general para toda la página */
+.root {
+  background-image: url('../../assets/image-canary.jpg') !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+
+/* 2. La caja blanca central para que los textos respiren y no se pisen con el fondo */
+.contentContainer { 
+  background-color: #ffffff !important;
+  border-radius: 12px !important;
+  padding: 32px !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15) !important;
+  margin: 32px auto !important;
+  max-width: 1050px !important;
+  width: 92% !important;
+}
