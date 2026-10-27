@@ -131,18 +131,17 @@
   composes: p from global;
   font-weight: var(--fontWeightBold);
 }
-/* 1. Imagen de fondo general para toda la página */
+/* Forzar el fondo en toda la estructura de la página de ofertas */
 .root {
- background-image: url('../../assets/fondo-transaccion.jpg') !important;
+  background-image: url('../../assets/image-canary.jpg') !important;
   background-size: cover !important;
   background-position: center !important;
   background-repeat: no-repeat !important;
   min-height: 100vh !important;
   width: 100% !important;
-  background-color: transparent !important; /* Forzamos transparencia para que no tape la imagen */
 }
 
-/* 2. La caja blanca central para que los textos respiren y no se pisen con el fondo */
+/* Asegurar que el contenedor interno sea una caja blanca limpia y centrada */
 .contentContainer { 
   background-color: #ffffff !important;
   border-radius: 12px !important;
