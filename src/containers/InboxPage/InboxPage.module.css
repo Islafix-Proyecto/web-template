@@ -396,17 +396,19 @@
   max-width: 1050px;
   width: 92%;
 }
-/* 1. Por defecto en móviles: la barra lateral limpia sin imagen de fondo */
+/* 1. En móviles: barra limpia */
 .navigation {
   background-image: none !important;
 }
 
-/* 2. En pantallas grandes (ordenadores de más de 768px): aparece tu imagen de Canva */
+/* 2. En escritorio: mantenemos altura fija y la imagen abajo */
 @media (min-width: 769px) {
   .navigation {
+    min-height: 550px !important; /* Mantiene la columna lo bastante alta aunque no haya mensajes */
+    padding-bottom: 220px !important; /* Empuja el área o deja espacio reservado */
     background-image: url('../../assets/inbox-sidebar.png') !important;
     background-size: contain !important;
-    background-position: top center !important;
+    background-position: bottom center !important; /* Fijamos la imagen en la parte INFERIOR */
     background-repeat: no-repeat !important;
   }
 }
