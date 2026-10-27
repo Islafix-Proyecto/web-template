@@ -137,6 +137,8 @@
   background-size: cover !important;
   background-position: center !important;
   background-repeat: no-repeat !important;
+  min-height: 100vh !important; /* Fuerza a que ocupe toda la altura de la pantalla */
+  width: 100% !important;
 }
 
 /* 2. La caja blanca central para que los textos respiren y no se pisen con el fondo */
