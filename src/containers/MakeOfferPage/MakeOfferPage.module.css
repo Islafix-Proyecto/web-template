@@ -133,12 +133,13 @@
 }
 /* 1. Imagen de fondo general para toda la página */
 .root {
-  background-image: url('../../assets/image-canary.jpg') !important;
+ background-image: url('../../assets/image-canary.jpg') !important;
   background-size: cover !important;
   background-position: center !important;
   background-repeat: no-repeat !important;
-  min-height: 100vh !important; /* Fuerza a que ocupe toda la altura de la pantalla */
+  min-height: 100vh !important;
   width: 100% !important;
+  background-color: transparent !important; /* Forzamos transparencia para que no tape la imagen */
 }
 
 /* 2. La caja blanca central para que los textos respiren y no se pisen con el fondo */
