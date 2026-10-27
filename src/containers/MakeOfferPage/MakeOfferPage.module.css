@@ -133,7 +133,7 @@
 }
 /* 1. Imagen de fondo general para toda la página */
 .root {
-  background-image: url('../../../assets/image-canary.jpg') !important;
+  background-image: url('../../assets/image-canary.jpg') !important;
   background-size: cover !important;
   background-position: center !important;
   background-repeat: no-repeat !important;
