@@ -39,6 +39,11 @@ const getPriceValidators = (listingMinimumPriceSubUnits, marketplaceCurrency, in
     quoteTooLowMsg
   );
 
+  return listingMinimumPriceSubUnits
+    ? validators.composeValidators(quoteRequired, minQuoteRequired)
+    : priceRequired;
+};
+
  
 
   
