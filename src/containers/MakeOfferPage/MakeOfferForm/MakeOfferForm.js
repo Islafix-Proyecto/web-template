@@ -159,8 +159,7 @@ export const MakeOfferForm = props => {
 
               <FieldCurrencyInput
                 id={`${formId}quote`}
-                name="quote"
-                max={20}
+                name="quote
                 className={css.input}
                 placeholder={intl.formatMessage(
                   {
