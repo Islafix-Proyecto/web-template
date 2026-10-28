@@ -28,34 +28,24 @@ import css from './MakeOfferForm.module.css';
 const { Money } = sdkTypes;
 
 const getPriceValidators = (listingMinimumPriceSubUnits, marketplaceCurrency, intl) => {
-  const quoteRequiredId = { id: 'MakeOfferPage.quoteRequired' };
-  const quoteRequiredMsg = intl.formatMessage(quoteRequiredId);
-  const quoteTooLowMsgId = { id: 'MakeOfferPage.quoteTooLow' };
-  const minPriceRaw = new Money(listingMinimumPriceSubUnits, marketplaceCurrency);
-  const minPrice = formatMoney(intl, minPriceRaw);
-  const quoteTooLowMsg = intl.formatMessage(quoteTooLowMsgId, { minPrice });
-  const minQuoteRequired = validators.moneySubUnitAmountAtLeast(
-    listingMinimumPriceSubUnits,
-    quoteTooLowMsg
-  );
+    const quoteRequiredMsgId = { id: 'MakeOfferPage.quoteRequired' };
+    const quoteRequiredMsg = intl.formatMessage(quoteRequiredMsgId);
+    const quoteRequired = validators.required(quoteRequiredMsg);
 
-  // NUEVO: Validación para que no pase de 20 € (2000 céntimos)
-  const maxAllowedSubUnits = 2000; 
-  const maxPriceMsg = 'El precio de la reserva no puede superar los 20 €';
-  const maxQuoteAllowed = value => {
-    return value && value.amount > maxAllowedSubUnits ? maxPriceMsg : undefined;
-  };
-
-  return listingMinimumPriceSubUnits
-    ? validators.composeValidators(quoteRequired, minQuoteRequired, maxQuoteAllowed)
-    : validators.composeValidators(quoteRequired, maxQuoteAllowed);
-};
-
+    const minPriceRaw = new Money(listingMinimumPriceSubUnits, marketplaceCurrency);
+    const minPrice = formatMoney(intl, minPriceRaw);
+    const quoteTooLowMsgId = { id: 'MakeOfferPage.quoteTooLow' };
+    const quoteTooLowMsg = intl.formatMessage(quoteTooLowMsgId, { minPrice });
+    const minQuoteRequired = validators.moneySubUnitAmountAtLeast(
+    quoteTooLowMsg,
+    listingMinimumPriceSubUnits
+      );
+  
   return listingMinimumPriceSubUnits
     ? validators.composeValidators(quoteRequired, minQuoteRequired)
     : priceRequired;
 };
-
+ 
 const FinePrint = ({ stripeConnected }) => {
   if (stripeConnected) {
     return (
@@ -162,8 +152,7 @@ export const MakeOfferForm = props => {
 
               <FieldCurrencyInput
                 id={`${formId}quote`}
-                name="quote"
-                max={20}
+                name="quote
                 className={css.input}
                 placeholder={intl.formatMessage(
                   {
