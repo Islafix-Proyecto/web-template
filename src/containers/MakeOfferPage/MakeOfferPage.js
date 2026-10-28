@@ -218,7 +218,7 @@ const MakeOfferPageComponent = props => {
   );
 
   return (
-    <Page title={pageTitle} scrollingDisabled={scrollingDisabled}>
+    <Page rootClassName={css.root} title={pageTitle} scrollingDisabled={scrollingDisabled}>
       <TopbarSimplified />
       <div className={css.contentContainer}>
         <MobileListingImage
