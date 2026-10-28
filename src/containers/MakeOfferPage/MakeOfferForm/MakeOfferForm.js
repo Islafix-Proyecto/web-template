@@ -39,20 +39,15 @@ const getPriceValidators = (listingMinimumPriceSubUnits, marketplaceCurrency, in
     quoteTooLowMsg
   );
 
-  // NUEVO: Validación para que no pase de 20 € (2000 céntimos)
-  const maxAllowedSubUnits = 2000; 
-  const maxPriceMsg = 'El precio de la reserva no puede superar los 20 €';
-  const maxQuoteAllowed = value => {
-    return value && value.amount > maxAllowedSubUnits ? maxPriceMsg : undefined;
-  };
+ 
 
-  return listingMinimumPriceSubUnits
-    ? validators.composeValidators(quoteRequired, minQuoteRequired, maxQuoteAllowed)
-    : validators.composeValidators(quoteRequired, maxQuoteAllowed);
+  
+return listingMinimumPriceSubUnits
+    ? validators.composeValidators(quoteRequired, minQuoteRequired)
+    : priceRequired;
 };
 
   
-
 const FinePrint = ({ stripeConnected }) => {
   if (stripeConnected) {
     return (
