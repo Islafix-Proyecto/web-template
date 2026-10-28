@@ -28,30 +28,24 @@ import css from './MakeOfferForm.module.css';
 const { Money } = sdkTypes;
 
 const getPriceValidators = (listingMinimumPriceSubUnits, marketplaceCurrency, intl) => {
-  const quoteRequiredId = { id: 'MakeOfferPage.quoteRequired' };
-  const quoteRequiredMsg = intl.formatMessage(quoteRequiredId);
-  const quoteTooLowMsgId = { id: 'MakeOfferPage.quoteTooLow' };
-  const minPriceRaw = new Money(listingMinimumPriceSubUnits, marketplaceCurrency);
-  const minPrice = formatMoney(intl, minPriceRaw);
-  const quoteTooLowMsg = intl.formatMessage(quoteTooLowMsgId, { minPrice });
-  const minQuoteRequired = validators.moneySubUnitAmountAtLeast(
-    listingMinimumPriceSubUnits,
-    quoteTooLowMsg
-  );
+    const quoteRequiredMsgId = { id: 'MakeOfferPage.quoteRequired' };
+    const quoteRequiredMsg = intl.formatMessage(quoteRequiredMsgId);
+    const quoteRequired = validators.required(quoteRequiredMsg);
 
+    const minPriceRaw = new Money(listingMinimumPriceSubUnits, marketplaceCurrency);
+    const minPrice = formatMoney(intl, minPriceRaw);
+    const quoteTooLowMsgId = { id: 'MakeOfferPage.quoteTooLow' };
+    const quoteTooLowMsg = intl.formatMessage(quoteTooLowMsgId, { minPrice });
+    const minQuoteRequired = validators.moneySubUnitAmountAtLeast(
+    quoteTooLowMsg,
+    listingMinimumPriceSubUnits
+      );
+  
   return listingMinimumPriceSubUnits
     ? validators.composeValidators(quoteRequired, minQuoteRequired)
     : priceRequired;
 };
  
-
-  
-return listingMinimumPriceSubUnits
-    ? validators.composeValidators(quoteRequired, minQuoteRequired)
-    : priceRequired;
-};
-
-  
 const FinePrint = ({ stripeConnected }) => {
   if (stripeConnected) {
     return (
