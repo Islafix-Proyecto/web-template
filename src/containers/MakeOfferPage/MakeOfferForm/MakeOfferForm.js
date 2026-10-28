@@ -51,10 +51,7 @@ const getPriceValidators = (listingMinimumPriceSubUnits, marketplaceCurrency, in
     : validators.composeValidators(quoteRequired, maxQuoteAllowed);
 };
 
-  return listingMinimumPriceSubUnits
-    ? validators.composeValidators(quoteRequired, minQuoteRequired)
-    : priceRequired;
-};
+  
 
 const FinePrint = ({ stripeConnected }) => {
   if (stripeConnected) {
