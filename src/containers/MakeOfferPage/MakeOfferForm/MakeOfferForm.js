@@ -28,16 +28,16 @@ import css from './MakeOfferForm.module.css';
 const { Money } = sdkTypes;
 
 const getPriceValidators = (listingMinimumPriceSubUnits, marketplaceCurrency, intl) => {
-    const quoteRequiredMsgId = { id: 'MakeOfferPage.quoteRequired' };
-    const quoteRequiredMsg = intl.formatMessage(quoteRequiredMsgId);
-    const quoteRequired = validators.required(quoteRequiredMsg);
+  const quoteRequiredMsgId = { id: 'MakeOfferPage.quoteRequired' };
+  const quoteRequiredMsg = intl.formatMessage(quoteRequiredMsgId);
+  const quoteRequired = validators.required(quoteRequiredMsg);
 
-    const minPriceRaw = new Money(listingMinimumPriceSubUnits, marketplaceCurrency);
-    const minPrice = formatMoney(intl, minPriceRaw);
-    const quoteTooLowMsgId = { id: 'MakeOfferPage.quoteTooLow' };
-    const quoteTooLowMsg = intl.formatMessage(quoteTooLowMsgId, { minPrice });
-    const minQuoteRequired = validators.moneySubUnitAmountAtLeast(
-  quoteTooLowMsg,
+  const minPriceRaw = new Money(listingMinimumPriceSubUnits, marketplaceCurrency);
+  const minPrice = formatMoney(intl, minPriceRaw);
+  const quoteTooLowMsgId = { id: 'MakeOfferPage.quoteTooLow' };
+  const quoteTooLowMsg = intl.formatMessage(quoteTooLowMsgId, { minPrice });
+  const minQuoteRequired = validators.moneySubUnitAmountAtLeast(
+    quoteTooLowMsg,
     listingMinimumPriceSubUnits
   );
 
@@ -190,14 +190,17 @@ export const MakeOfferForm = props => {
               />
             </div>
 
-            <div className={css.submitButtonWrapperClassName}>
-        <ErrorMessage error={makeOfferError} />
-        <PrimaryButton type="submit" inProgress={submitInProgress} disabled={submitDisabled}>
-          <FormattedMessage id="MakeOfferPage.submitButtonText" />
-        </PrimaryButton>
-        <FinePrint stripeConnected={stripeConnected} />
-      </div>
-    </Form>
+            <div className={submitButtonWrapperClassName}>
+              <ErrorMessage error={makeOfferError} />
+              <PrimaryButton type="submit" inProgress={submitInProgress} disabled={submitDisabled}>
+                <FormattedMessage id="MakeOfferPage.submitButtonText" />
+              </PrimaryButton>
+              <FinePrint stripeConnected={stripeConnected} />
+            </div>
+          </Form>
+        );
+      }}
+    />
   );
 };
 
