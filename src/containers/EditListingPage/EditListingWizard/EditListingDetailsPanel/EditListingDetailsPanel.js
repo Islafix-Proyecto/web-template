@@ -384,7 +384,14 @@ const EditListingDetailsPanel = props => {
   <img 
     src={bannerDetalles} 
     alt="Información del servicio" 
-    style={{ maxWidth: '100%', marginTop: '20px', borderRadius: '8px' }} 
+    style={{ 
+      maxWidth: '100%', 
+      marginTop: '120px', 
+      display: 'block', 
+      marginLeft: 'auto', 
+      marginRight: 'auto', 
+      borderRadius: '8px' 
+    }} 
   />
 </div>
 
