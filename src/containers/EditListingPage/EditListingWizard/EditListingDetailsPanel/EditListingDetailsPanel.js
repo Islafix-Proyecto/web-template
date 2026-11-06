@@ -24,6 +24,7 @@ import { H3, ListingLink } from '../../../../components';
 import ErrorMessage from './ErrorMessage';
 import EditListingDetailsForm from './EditListingDetailsForm';
 import css from './EditListingDetailsPanel.module.css';
+import bannerDetalles from '../../assets/banner-detalles.png';
 
 /**
  * Get listing configuration. For existing listings, it is stored to publicData.
@@ -379,6 +380,11 @@ const EditListingDetailsPanel = props => {
       <H3 as="h1">
         <FormattedMessage id={panelHeadingProps.id} values={{ ...panelHeadingProps.values }} />
       </H3>
+<img 
+  src={bannerDetalles} 
+  alt="Información del servicio" 
+  style={{ maxWidth: '100%', marginTop: '15px', borderRadius: '8px' }} 
+/>
 
       {canShowEditListingDetailsForm ? (
         <EditListingDetailsForm
