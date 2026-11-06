@@ -380,11 +380,14 @@ const EditListingDetailsPanel = props => {
       <H3 as="h1">
         <FormattedMessage id={panelHeadingProps.id} values={{ ...panelHeadingProps.values }} />
       </H3>
-<img 
-  src={bannerDetalles} 
-  alt="Información del servicio" 
-  style={{ maxWidth: '100%', marginTop: '15px', borderRadius: '8px' }} 
-/>
+<div className={css.leftColumn}>
+  <img 
+    src={bannerDetalles} 
+    alt="Información del servicio" 
+    style={{ maxWidth: '100%', marginTop: '20px', borderRadius: '8px' }} 
+  />
+</div>
+
 
       {canShowEditListingDetailsForm ? (
         <EditListingDetailsForm
