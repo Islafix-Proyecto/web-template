@@ -24,7 +24,7 @@ import { H3, ListingLink } from '../../../../components';
 import ErrorMessage from './ErrorMessage';
 import EditListingDetailsForm from './EditListingDetailsForm';
 import css from './EditListingDetailsPanel.module.css';
-import bannerDetalles from '../../../../assets/banner-detalles.png';
+import bannerDetalles from '../../assets/banner-detalles.png';
 
 /**
  * Get listing configuration. For existing listings, it is stored to publicData.
@@ -380,21 +380,11 @@ const EditListingDetailsPanel = props => {
       <H3 as="h1">
         <FormattedMessage id={panelHeadingProps.id} values={{ ...panelHeadingProps.values }} />
       </H3>
-<div className={css.leftColumn} style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', height: '100%' }}>
-  <div>
-    <H3 as="h1">
-      <FormattedMessage id={panelHeadingProps.id} values={{ ...panelHeadingProps.values }} />
-    </H3>
-  </div>
-  <div style={{ marginTop: 'auto', marginBottom: 'auto', paddingTop: '80px' }}>
-    <img 
-      src={bannerDetalles} 
-      alt="Información del servicio" 
-      style={{ maxWidth: '100%', borderRadius: '8px', display: 'block', margin: '0 auto' }} 
-    />
-  </div>
-</div>
-
+<img 
+  src={bannerDetalles} 
+  alt="Información del servicio" 
+  style={{ maxWidth: '100%', marginTop: '15px', borderRadius: '8px' }} 
+/>
 
       {canShowEditListingDetailsForm ? (
         <EditListingDetailsForm
