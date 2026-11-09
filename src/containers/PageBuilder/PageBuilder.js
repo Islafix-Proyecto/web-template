@@ -138,7 +138,7 @@ const PageBuilder = props => {
                 <TopbarContainer currentPage={currentPage} />
               </Topbar>
               <Main as="main" id="main-content" className={css.main}>
-            {props.pageId === 'how-it-works' || props.pageId === 'how-it-work' ? (
+      {props.pageId === 'how-it-work' || props.pageId === 'como-funciona' || (props.pageId && props.pageId.includes('how')) ? (
         <div style={{
           background: '#ffffff',
           borderRadius: '12px',
