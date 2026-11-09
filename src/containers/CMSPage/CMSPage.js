@@ -24,12 +24,13 @@ export const CMSPageComponent = props => {
   }
 
   return (
-    <PageBuilder
+   <PageBuilder
       pageAssetsData={pageAssetsData?.[pageId]?.data}
       inProgress={inProgress}
       schemaType="Article"
       featuredListings={getFeaturedListingsProps(pageId, props)}
     />
+        
   );
 };
 

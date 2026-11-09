@@ -753,7 +753,7 @@ class EditListingWizard extends Component {
               />
             );
           })}
-        </Tabs>
+</Tabs>
         <Modal
           id="EditListingWizard.payoutModal"
           isOpen={this.state.showPayoutDetails}
