@@ -137,7 +137,12 @@ const PageBuilder = props => {
               <Topbar as="header" className={css.topbar}>
                 <TopbarContainer currentPage={currentPage} />
               </Topbar>
-              <Main as="main" id="main-content" className={css.main}>
+              <Main as="main" id="main-content" className={css.main} style={{
+  backgroundImage: `url(${require('../../assets/fondo-canarias.jpg')})`,
+  backgroundSize: 'cover',
+  backgroundPosition: 'center',
+  backgroundAttachment: 'fixed'
+}}>
       {typeof window !== 'undefined' && (window.location.pathname.includes('how') || window.location.pathname.includes('como-funciona')) ? (
         <div style={{
           background: '#ffffff',
