@@ -753,6 +753,13 @@ class EditListingWizard extends Component {
               />
             );
           })}
+<div style={{ marginTop: '30px', textAlign: 'center', padding: '0 15px' }}>
+          <img 
+            src={require('../../assets/banner-detalles.png')} 
+            alt="Banner lateral" 
+            style={{ width: '100%', maxWidth: '200px', height: 'auto', borderRadius: '8px' }} 
+          />
+        </div>
         </Tabs>
         <Modal
           id="EditListingWizard.payoutModal"
