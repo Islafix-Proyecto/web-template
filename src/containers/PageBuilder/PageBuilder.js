@@ -147,13 +147,13 @@ const PageBuilder = props => {
         margin: '40px auto'
       }}>
                 {sections.length === 0 && inProgress ? (
-                  <LoadingSpinner />
-                ) : (
-                  <SectionBuilder sections={sections} options={{ ...options, featuredListings }} />
-                )}
-              </Main>
-                  </div>
-              <Footer>
+        <LoadingSpinner />
+      ) : (
+        <SectionBuilder sections={sections} options={{ ...options, featuredListings }} />
+      )}
+      </div>
+    </Main>
+    <Footer>
                 <FooterContainer />
               </Footer>
             </>
