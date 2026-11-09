@@ -138,12 +138,21 @@ const PageBuilder = props => {
                 <TopbarContainer currentPage={currentPage} />
               </Topbar>
               <Main as="main" id="main-content" className={css.main}>
+            <div style={{
+        background: '#ffffff',
+        borderRadius: '12px',
+        boxShadow: '0 4px 20px rgba(0, 0, 0, 0.08)',
+        padding: '40px',
+        maxWidth: '1100px',
+        margin: '40px auto'
+      }}>
                 {sections.length === 0 && inProgress ? (
                   <LoadingSpinner />
                 ) : (
                   <SectionBuilder sections={sections} options={{ ...options, featuredListings }} />
                 )}
               </Main>
+                  </div>
               <Footer>
                 <FooterContainer />
               </Footer>
